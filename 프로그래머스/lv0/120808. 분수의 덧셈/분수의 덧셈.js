@@ -1,18 +1,15 @@
 function solution(denum1, num1, denum2, num2) {
-    // const res = [];
     // num: 분모
     const num = num1 * num2;
     // denum: 분자
     const denum = denum1 * num2 + denum2 * num1;
     
- 
-    // 분자, 분모 둘 다 둘 중 작은수로 나눈 나머지가 0이어야 함.
-    let minNumber = Math.max(num, denum);
+    const gcd = (x, y) => {
+        const rest = x % y;
+        if (rest === 0) return y;
+        return gcd(y, rest);
+    }
     
-    while (true) {
-            if (denum % minNumber === 0 && num % minNumber === 0) {
-        return [denum / minNumber, num / minNumber];
-    }
-    minNumber = minNumber - 1;
-    }
+    const divider = num > denum ? gcd(num, denum) : gcd(denum, num);
+    return [denum / divider, num / divider];
 } 
