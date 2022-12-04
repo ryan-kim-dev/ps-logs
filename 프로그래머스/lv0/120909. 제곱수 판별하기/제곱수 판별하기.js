@@ -3,7 +3,7 @@ function solution(n) {
    //     if (i * i === n) return 1; 
    // }
    //  return 2;
-    const answer = Math.sqrt(n) === Math.round(Math.sqrt(n)) ?
+    const answer = Math.sqrt(n) === Math.floor(Math.sqrt(n)) ?
           1 : 2;
     return answer;
         
