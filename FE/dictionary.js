@@ -3,6 +3,22 @@
 // 3. 1,2로 정제된 문자열이 key가 되고 eng 값과 kor 값이 각각 value가 되어야 한다
 //     1. eng 끼리, kor 끼리 별도 배열을 생성할까?
 
+const input = [
+  {
+    key: 'toolbar-create-link-tooltip',
+    eng: 'Create node & link',
+    kor: '노드 및 링크 생성',
+  },
+  { key: 'toolbar-open-manual', eng: 'Save Manual', kor: '메뉴얼 다운로드' },
+  { key: 'sidebar-zoom-in-tooltip', eng: 'Zoom in', kor: '화면 확대' },
+  { key: 'sidebar-zoom-out-tooltip', eng: 'Zoom out', kor: '화면 축소' },
+  {
+    key: 'sidebar-zoom-zero-tooltip',
+    eng: 'Lock on Robot',
+    kor: '화면 시점을 로봇으로 고정',
+  },
+];
+
 function solution(arr) {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
