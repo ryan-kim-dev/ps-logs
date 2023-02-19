@@ -101,6 +101,9 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
+# 문제풀이 폴더
+input/
+
 # vuepress build output
 .vuepress/dist
 
