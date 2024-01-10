@@ -6,6 +6,7 @@
 
 ```js
 import fs from 'fs';
+// filePath는 로컬에서 input.txt 파일 하나 만들어서 테스트해보기 위해 삼항 연산자 사용. 제출용은 '/dev/stdin'만 써도 상관없음
 const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 ```
 
